@@ -39,6 +39,7 @@ public class ExampleResource {
         return this.exampleService.longProcess();     	        
     }
     
+
     @GetMapping("/greetings-blocking")
     public String greetingBlocking() {   
         return this.exampleService.longProcess();   	        
