@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.sando.spring.nonblocking.config.NonBlockingWebConfiguration
+  io.github.dondragon2.spring.nonblocking.config.NonBlockingWebConfiguration
