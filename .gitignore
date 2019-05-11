@@ -49,7 +49,7 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
-.idea/
+.idea/**
 *.iws
 out/
 .idea_modules/
