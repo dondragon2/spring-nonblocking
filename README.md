@@ -34,12 +34,12 @@ public class ExampleResource {
     private ExampleService exampleService;
 
     @NonBlocking
-    @GetMapping("/greetings-non-blocking)
+    @GetMapping("/greetings-non-blocking")
     public String greeting() {
         return this.exampleService.longProcess();     	        
     }
     
-    @GetMapping("/greetings-blocking)
+    @GetMapping("/greetings-blocking")
     public String greetingBlocking() {   
         return this.exampleService.longProcess();   	        
     }
@@ -67,12 +67,12 @@ public class ExampleResource {
     @Autowired
     private ExampleService exampleService;
 
-    @GetMapping("/greetings-non-blocking)
+    @GetMapping("/greetings-non-blocking")
     public Observable greeting() {
         return this.exampleService.nonBlockingProcess();     	        
     }
     
-    @GetMapping("/greetings-blocking)
+    @GetMapping("/greetings-blocking")
     public String greetingBlocking() {   
         return this.exampleService.longProcess();   	        
     }
