@@ -3,7 +3,7 @@ apply plugin: 'maven-publish'
 apply plugin: 'signing'
 
 group 'io.github.dondragon2'
-version '0.1'
+version '0.1.1'
 
 sourceCompatibility = 1.8
 
@@ -43,7 +43,6 @@ artifacts {
 signing {
     sign configurations.archives
 }
-
 
 publishing {
     publications {
@@ -138,7 +137,6 @@ def customizePom(pom) {
         }
     }
 }
-
 
 model {
     tasks.generatePomFileForMavenJavaPublication {
