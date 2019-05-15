@@ -28,14 +28,16 @@ There are 2 ways of using spring-nonblocking
 ```java
 @RestController
 public class ExampleResource {
-    private final static Logger log = LoggerFactory.getLogger(ExampleResource.class);
     
     @Autowired
     private ExampleService exampleService;
 
+    /*
+        Note: return type must be "Object" to avoid ClassCastException
+    */
     @NonBlocking
     @GetMapping("/greetings-non-blocking")
-    public String greeting() {
+    public Object greeting() {
         return this.exampleService.longProcess();     	        
     }
     
@@ -63,7 +65,6 @@ public class ExampleService {
 ```java
 @RestController
 public class ExampleResource {
-    private final static Logger log = LoggerFactory.getLogger(ExampleResource.class);
     
     @Autowired
     private ExampleService exampleService;
