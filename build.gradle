@@ -3,7 +3,7 @@ apply plugin: 'maven-publish'
 apply plugin: 'signing'
 
 group 'io.github.dondragon2'
-version '0.1.1'
+version '0.1.2'
 
 sourceCompatibility = 1.8
 

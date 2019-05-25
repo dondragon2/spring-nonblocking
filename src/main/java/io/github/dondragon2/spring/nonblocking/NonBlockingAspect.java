@@ -9,11 +9,15 @@ import rx.Observable;
 public class NonBlockingAspect {
 
     @Around("@annotation(io.github.dondragon2.spring.nonblocking.annotations.NonBlocking)")
-    public Observable<?> handleRequest(ProceedingJoinPoint joinPoint){
+    public Observable<?> handleRequest(ProceedingJoinPoint joinPoint) {
         return Observable.fromCallable(() -> {
             try {
                 return joinPoint.proceed();
             } catch (Throwable throwable) {
+                if (throwable instanceof Exception) {
+                    throw (Exception) throwable;
+                }
+
                 throw new Exception(throwable);
             }
         });
