@@ -10,13 +10,13 @@ A simple framework to enable non-blocking on spring rest controllers and service
 <dependency>
     <groupId>io.github.dondragon2</groupId>
     <artifactId>spring-nonblocking</artifactId>
-    <version>0.1.1</version>
+    <version>0.1.2</version>
 </dependency>
 ```
 
 **Gradle**
 ```groovy
-compile group: 'io.github.dondragon2', name: 'spring-nonblocking', version: '0.1.1'
+compile group: 'io.github.dondragon2', name: 'spring-nonblocking', version: '0.1.2'
 ```
 
 **Usage:**
